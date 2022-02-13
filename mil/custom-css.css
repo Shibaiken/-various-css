@@ -1,178 +1,54 @@
 * {
     background: transparent !important;
-}
-
-/* 全体の設定 */
-#chat-panel-area {
-    border: 3px solid #000000f0 !important;
-    background-color: #2d2d2d8c !important;
-    max-width: none;
-}
-
-.message-list > div {
-    margin: auto 0;
-    padding: 0 5px !important;
-}
-
-/* チャット枠の設定 */
-.text-message {
+    color: #ffffff;
+   }
+   
+   #chat-panel-area {
+    border: 1px;
+   }
+   
+   .text-message {
     border-radius: 10px !important;
-    border: 2px solid #2b2b2b !important;
-    padding: 5px !important;
-    background-color: #2d2d2d !important;
-    margin: 3px 0 !important;
-}
-
-/* 多分管理人のコメント設定(ヘボ兄配信では関係ないはず) */
-.bubble-msg-container {
-    margin: 3px 0 !important;
-}
-
-/* チャットの文字装飾の設定 */
-.text-message span:last-child {
-    font-size: 23px;
-    color: #E8E042;
+    border: 2px solid #000 !important;
+    padding: 3px !important;
+    background-color: #aaaaff !important;
+   }
+   
+   .text-message span:not(:last-child) {
+    display: none;
+   }
+   
+   .text-message  span:last-child{
+    font-size: 22px;
+    color: #ffffff;
     line-height: 25px !important;
     margin-top: 2px !important;
-    text-shadow: 2px 2px 0px #000000,
-    -2px 2px 0px #000000,
-    2px -2px 0px #000000,
-    -2px -2px 0px #000000,
-    2px 0px 0px #000000,
-    0px 2px 0px #000000,
-    -2px 0px 0px #000000,
-    0px -2px 0px #000000;
-}
-
-/* 通常チャットのテキスト部分以外は非表示 */
-.text-message span:not(:nth-child(3)) {
-    display: none !important;
-}
-
-/* ギフト関連の設定 */
-.gift-message {
+    text-shadow    : 
+          2px  2px 0px #000000,
+         -2px  2px 0px #000000,
+          2px -2px 0px #000000,
+         -2px -2px 0px #000000,
+          2px  0px 0px #000000,
+          0px  2px 0px #000000,
+         -2px  0px 0px #000000,
+          0px -2px 0px #000000;
+   }
+   
+   .gift-message {
     border-radius: 10px !important;
-    border: 2px solid #f00 !important;
+    border: 2px solid #ff0000 !important;
     padding: 5px !important;
-    background-color: #6b1c1c !important;
-    font-size: 18px;
+    background-color: #6a5acd !important;
+    color: #000000 !important;
+    font-size: 15px !important;
     font-weight: bold !important;
-    color: #000 !important;
-    margin: 3px 0;
-}
-
-/*  以下2つ スクロールバー削除設定 */
-.message-list {
-    -ms-overflow-style: none;
-}
-.message-list::-webkit-scrollbar {
-    display: none !important;
-}
-
-/* まとめられたコメントが多かった場合のもっと見るボタン */
-.more {
+   }
+   
+   .sc-871wle-0{
     display: none;
-}
-
-/* 以下はミルダムの更新が入ると変更が必要となる可能性が高い要素 */
-/* フォロー表示関連の設定
- * sc-qten9c-0 = ファン通知テキスト(ニュース：xxx はファンになりました。次のライブを見逃しません)
-*/
-.sc-qten9c-0 {
-    border-radius: 10px !important;
-    border: 2px solid #f00 !important;
-    padding: 5px !important;
-    background-color: #6b1c1c !important;
-    font-size: 19px;
-    font-weight: bold !important;
-    color: #000 !important;
-    margin: 3px 0;
-}
-
-/* 色々非表示する設定
-* sc-871wle-0 = まとめらるコメント(入室等含む)
-* sc-ukeyde-0 = "配信者にギフトを贈って応援しよう！"の文言
-* sc-1fp5tmo-3 = 上部に表示される「チャット」の文字
-* sc-qx0duy-0 = プレコメ部分
-* sc-1c6xoca-0 = 入室時の注意書き(注意:ポルノ、暴力などの不適切なコンテンツは厳しく禁止されています。)
-* sc-reiprf-6 / sc-1fp5tmo-1 = 真下の時以外に出る「新しいコメントを見る」ボタン(OBS読み込み時は本当は要らない)
-* sc-edtvok-0 = ボーナスタイム関連のテキスト(ボーナスタイムまでの到達度：xx.xx%，)
-* sc-1c6xoca-0 = イベント時のテキスト(現在イベントxx位！xx位との差はxxポイント！)
-*/
-.sc-qx0duy-0,
-.sc-ukeyde-0,
-.sc-1c6xoca-0,
-.sc-reiprf-6,
-.sc-1fp5tmo-1,
-.sc-edtvok-0,
-.sc-1c6xoca-0 {
+   }
+   
+   .sc-1c6xoca-0{
     display: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* 上部の表示設定
-* 消しても良さそうだったけど折角なら利用する
-*/
-.sc-1fp5tmo-4 .active:before {
-    font-size: 23px;
-    content: 'Mildom';
-    color: #E8E042;
-    text-shadow: 2px 2px 0px #000000,
-    -2px 2px 0px #000000,
-    2px -2px 0px #000000,
-    -2px -2px 0px #000000,
-    2px 0px 0px #000000,
-    0px 2px 0px #000000,
-    -2px 0px 0px #000000,
-    0px -2px 0px #000000;
-}
-
-.sc-1fp5tmo-4 .active {
-    font-size: 0;
-    background-color: #2d2d2d !important;
-    border: 1px solid #000000f0 !important;
-}
-
-.sc-1fp5tmo-2 {
-    border-top: 1px solid #000000f0 !important;
-}
-
-/* sc-o2rs1q-0 = チャット直下のクラス名
-   ギフトとチャット以外は削除する(入室系)
-*/
-.sc-o2rs1q-0 div:not(.gift-message):not(.text-message) {
-    display: none !important;
-}
-/* sc-1gq62s6-0 = ギフトに表示されるいいねボタン
- * いいねボタンの表示を削除
-*/
-.gift-message .sc-1gq62s6-0 {
-    display: none;
-}
-
-/*
-コメント欄の隙間を一旦消す
-bubble-msg-container = 管理人コメント？ 無駄に隙間作られるので消す
-*/
-.sc-o2rs1q-0,
-.sc-o2rs1q-0 .bubble-msg-container {
-    padding: 0;
-    margin: 0;
-}
-
-/*  まとめられたコメントのスタイル */
-.sc-871wle-0 {
-    background-color: #00000075 !important;
-    margin: 3px 0 !important;
-    font-size: 20px;
-}
-
-.sc-871wle-1 {
-    display: none;
-}
-
-.enter-room-message {
-    color: #fff;
-    font-weight: bold;
-}
+   }
+   
