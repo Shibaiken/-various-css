@@ -1,0 +1,46 @@
+* {
+    background: transparent !important;
+    color: #ffffff !important;
+   }
+   
+   body {
+    color: #ffffff !important;
+   }
+   
+   .stream-chat-header,
+   .channel-leaderboard,
+   .community-highlight-stack__card,
+   .chat-line__status,
+   .user-notice-line,
+   .chat-line__username-container,
+   .chat-input{
+    display: none !important;
+   }
+   
+   .chat-line__username-container span:first-child {
+    display: hidden !important;
+   }
+   
+   span[data-test-selector="chat-message-separator"] {
+    display: none !important;
+   }
+   
+   .chat-line__message{
+    border-radius: 10px !important;
+    border: 2px solid #000 !important;
+    padding: 8px !important;
+    background-color: #32cd32 !important;
+    font-size: 22px;
+    color: #ffffff;
+    line-height: 25px !important;
+    margin: 10px !important;
+    text-shadow  : 
+          2px  2px 0px #000000,
+         -2px  2px 0px #000000,
+          2px -2px 0px #000000,
+         -2px -2px 0px #000000,
+          2px  0px 0px #000000,
+          0px  2px 0px #000000,
+         -2px  0px 0px #000000,
+          0px -2px 0px #000000;
+   }
